@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "classement-du-:date", to: 'classements#show', as: :monclassement
   get "contact", to: 'contact#index'
   get "video", to:  'video#index'

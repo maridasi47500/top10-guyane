@@ -90,6 +90,8 @@ background-color: #4433cc;
 													             background: #62ff00;
 							      width:100%;
 							      height:100%;
+							      border-top: solid 11px white;
+							      border-bottom: solid 11px white;
 														             }
 															     .mydiv {
 																         height: 36px;
@@ -113,12 +115,14 @@ background-color: #4433cc;
 										      -webkit-text-stroke: white 3px;
 										          text-shadow: lightgrey -2px 9px;
 										  }
-										  #text{
-											    position: absolute;
-											      top: 50%;
-											        left: 50%;
-												  font-size: 50px;
-												    color: white;
-												      transform: translate(-50%,-50%);
-												        -ms-transform: translate(-50%,-50%);
-												}
+										  #text {
+											      position: absolute;
+											          top: 50%;
+												      left: 50%;
+												          font-size: 40px;
+													      color: white;
+													          transform: translate(-50%,-50%);
+														      background: black;
+														          padding: 70px;
+															      -ms-transform: translate(-50%,-50%);
+														      }

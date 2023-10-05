@@ -1,4 +1,4 @@
-$(function(){
+
   function on() {
       document.getElementById("overlay").style.display = "block";
   }
@@ -6,4 +6,11 @@ $(function(){
   function off() {
       document.getElementById("overlay").style.display = "none";
   }
+
+$(function(){
+	$("#connection").click(function(){
+      document.getElementById("overlay").style.display = "block";
+
+	});
+
 });

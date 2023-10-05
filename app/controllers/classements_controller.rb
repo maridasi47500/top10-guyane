@@ -1,6 +1,8 @@
 class ClassementsController < ApplicationController
   before_action :set_classement, only: %i[ edit update destroy ]
   before_action :set_this_classement, only: %i[ show  ]
+  before_action :authenticate_user!, only:[:create,:edit,:update,:delete]
+
 
   # GET /classements or /classements.json
   def index
