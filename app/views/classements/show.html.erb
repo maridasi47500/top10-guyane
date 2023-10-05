@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Classement du <%= l(@classement.date, format: :long).downcase %></h1>
+<%= render @classement.hits %>
+
+<div>
+  <%= link_to "Edit this classement", edit_classement_path(@classement) %> |
+  <%= link_to "Back to classements", classements_path %>
+
+  <%= button_to "Destroy this classement", @classement, method: :delete %>
+</div>

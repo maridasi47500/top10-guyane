@@ -1,0 +1,45 @@
+<%= form_with(model: classement) do |form| %>
+  <% if classement.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(classement.errors.count, "error") %> prohibited this classement from being saved:</h2>
+
+      <ul>
+        <% classement.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+  <%=form.fields_for :hits do |f|%>
+    <div class="card">
+
+                    <div>
+                          <%= f.label :title, style: "display: block" %>
+                              <%= f.text_field :title %>
+                                </div>
+
+                                  <div>
+                                        <%= f.label :artist, style: "display: block" %>
+                                            <%= f.text_field :artist %>
+                                              </div>
+
+                                                <div>
+                                                      <%= f.label :image, style: "display: block" %>
+                                                          <%= f.text_field :image %>
+                                                            </div>
+
+                                                              <div>
+                                                                        <%= f.hidden_field :order %>
+                                                                          </div>
+                                                                          </div>
+  <%end%>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

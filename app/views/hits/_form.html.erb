@@ -1,0 +1,42 @@
+<%= form_with(model: hit) do |form| %>
+  <% if hit.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(hit.errors.count, "error") %> prohibited this hit from being saved:</h2>
+
+      <ul>
+        <% hit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :classement_id, style: "display: block" %>
+    <%= form.number_field :classement_id %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :artist, style: "display: block" %>
+    <%= form.text_field :artist %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :order, style: "display: block" %>
+    <%= form.number_field :order %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
