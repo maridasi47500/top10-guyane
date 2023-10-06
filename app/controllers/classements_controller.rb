@@ -15,10 +15,11 @@ class ClassementsController < ApplicationController
 
   # GET /classements/new
   def new
-    @classement = Classement.new
+    @classement = Classement.new(user_id: current_user.try(:id))
     @x=1
     10.times do
-      @classement.hits.new(order: @x)
+      @m=@classement.hits.new(myorder: @x)
+      @m.song=Song.new
       @x+=1
     end
   end

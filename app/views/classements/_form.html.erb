@@ -17,24 +17,27 @@
   </div>
   <%=form.fields_for :hits do |f|%>
     <div class="card">
-
-                    <div>
-                          <%= f.label :title, style: "display: block" %>
-                              <%= f.text_field :title %>
-                                </div>
-
-                                  <div>
-                                        <%= f.label :artist, style: "display: block" %>
-                                            <%= f.text_field :artist %>
-                                              </div>
-
                                                 <div>
                                                       <%= f.label :image, style: "display: block" %>
                                                           <%= f.text_field :image %>
                                                             </div>
 
+
+                                <%=f.fields_for :song do |ff|%>
+                                  <div>
+                                        <%= ff.label :myartist, style: "display: block" %>
+                                            <%= ff.text_field :myartist %>
+                                              </div>
+                    <div>
+                          <%= ff.label :mytitle, style: "display: block" %>
+                              <%= ff.text_field :mytitle %>
+                                </div>
+
+
+                                                          <%end%>
+
                                                               <div>
-                                                                        <%= f.hidden_field :order %>
+                                                                        <%= f.hidden_field :myorder %>
                                                                           </div>
                                                                           </div>
   <%end%>

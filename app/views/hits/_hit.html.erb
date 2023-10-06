@@ -5,6 +5,21 @@
 
 <img decoding="async" loading="lazy" src="<%=hit.image%>" alt="" class="wp-image-28935 parallelogram" >
 
-<span><%=hit_counter + 1%></span>
+<span class="mynumber"><%=hit_counter + 1%></span>
+<span class="monclassement <%=case hit.monclassement
+                              when ">"
+                                "more"
+                              when "<"
+                                "less"
+                              when "="
+                                "egal"
+                              end%>"><%=case hit.monclassement
+                              when ">"
+                                ">>>"
+                              when "<"
+                                "<<<"
+                              when "="
+                                "="
+                              end%></span>
 </div>
   <div class="mydiv"></div>

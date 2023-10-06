@@ -1,0 +1,25 @@
+span.monclassement.egal {
+	    position: absolute;
+	        left: 55%;
+		    font-size: 64px;
+		        border: purple 4px solid;
+			    border-radius: 9999999999px;
+			        padding: 1px 15px 7px 15px;
+				    line-height: 71px;
+				        font-weight: 900;
+					    box-shadow: 1px 1px 12px 2px #ffa7ff;
+					        text-shadow: 0px 1px 8px black;
+						    top: 48%;
+					    }
+					    span.monclassement.more, span.monclassement.less {
+							        position: absolute;
+								    font-size: 37px;
+								        transform: rotate(90deg) scale(1.5, 3);
+									    letter-spacing: -13px;
+									        font-weight: 700;
+										    -webkit-text-stroke: white 1px;
+										        color: transparent;
+											    text-shadow: 3px 0px 4px purple;
+											        left: 65%;
+												    top: 151%;
+											    }

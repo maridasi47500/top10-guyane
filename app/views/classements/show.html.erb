@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Classement du <%= l(@classement.date, format: :long).downcase %></h1>
-<%= render @classement.hits %>
+<%= render @classement.meshits %>
 
 <div>
   <%= link_to "Edit this classement", edit_classement_path(@classement) %> |

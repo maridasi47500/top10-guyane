@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :songs
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   get "classement-du-:date", to: 'classements#show', as: :monclassement
   get "contact", to: 'contact#index'
   get "video", to:  'video#index'
