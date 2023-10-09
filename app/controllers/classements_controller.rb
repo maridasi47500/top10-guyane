@@ -26,6 +26,10 @@ class ClassementsController < ApplicationController
 
   # GET /classements/1/edit
   def edit
+    @classement.hits.each do |h|
+      h.song.myartist=h.song.artist
+      h.song.mytitle=h.song.title
+    end
   end
 
   # POST /classements or /classements.json
